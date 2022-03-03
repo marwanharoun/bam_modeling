@@ -1,6 +1,6 @@
 clc
 clear
-syms l1a l2a l3a l4a d5a_0 d5a TETA1a_0 TETA1a TETA2a TETA3a PHI1a PHI3a
+syms l1a l2a l3a l4a d5a_0 d5a TETA1a_0 TETA1a TETA2a TETA3a TETA4a PHI1a PHI3a
 
 
 
@@ -90,7 +90,8 @@ Z2a = Ref_2a(:,3);
 T1a = T_Rot(Osa_0,Zsa,TETA1a);
 T2a = T_Rot(O1a_0,Z1a,TETA2a);
 T3a = T_Rot(O1a_0,X1a,TETA3a);
-T4a = T_Trans(Z2a,d5a);
+T4a = T_Rot(O2a_0,Z2a,TETA4a);
+T5a = T_Trans(Z2a,d5a);
 
 % -----------------------------------------------------------------------
 %                         FRAMES OF (a) NOT AT REST
@@ -98,7 +99,7 @@ T4a = T_Trans(Z2a,d5a);
 T_sa = T_sa_0;
 T_1a_sa = T1a*T_1a_sa_0;
 T_2a_sa = T1a*T2a*T3a*T_2a_sa_0;
-T_ea_sa = T1a*T2a*T3a*T4a*T_ea_sa_0;
+T_ea_sa = T1a*T2a*T3a*T4a*T5a*T_ea_sa_0;
 
 % -----------------------------------------------------------------------
 %                         ORIGINS OF (a) NOT AT REST
