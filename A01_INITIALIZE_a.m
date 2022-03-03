@@ -26,7 +26,7 @@ PHI2a = atan2(l2a,l1a);
 l12a = sqrt(l2a*l2a + l1a*l1a);
 
 PHI5a = atan2(l2a+l3a,l1a);
-l123a = sqrt(l1a*l1a + (l2a+l3a)^2); % test
+l123a = sqrt(l1a*l1a + (l2a+l3a)^2); % testis
 
 % -----------------------------------------------------------------------
 %                         FRAMES OF (a) AT REST
