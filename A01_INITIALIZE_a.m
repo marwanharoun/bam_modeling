@@ -47,7 +47,7 @@ T_1a_sa_0 = [[Ref_1a; 0 0 0] [O1a_0;1]];
 
 % ----------- Frame {2} at rest position expressed in coordinates of {1}:
 Ref_2a_1a = simplify(Rot(Ref_s(:,2), PHI1a)*Ref_s);
-Ref_2a_1a = simplify(Rot(Ref_2a_1a(:,3), PHI3a)*Ref_2a_1a);
+Ref_2a_1a = simplify(Rot(Ref_2a_1a(:,3), (PHI3a+PHI6a))*Ref_2a_1a);
 Ref_2a_1a = [Ref_2a_1a(:,2) Ref_2a_1a(:,3) Ref_2a_1a(:,1)];
 O2a_1a_0 = [l4a*cos(PHI3a)*cos(PHI1a);l4a*sin(PHI3a)+l3a;l4a*cos(PHI3a)*-sin(PHI1a)]; 
 % (It's different from the one found in my notes. Verify)
