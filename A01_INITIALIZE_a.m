@@ -26,7 +26,10 @@ PHI2a = atan2(l2a,l1a);
 l12a = sqrt(l2a*l2a + l1a*l1a);
 
 PHI5a = atan2(l2a+l3a,l1a);
-l123a = sqrt(l1a*l1a + (l2a+l3a)^2); % testis
+l123a = sqrt(l1a*l1a + (l2a+l3a)^2);
+
+% The following are found using the cos law:
+[O1O2, PHI4a, PHI6a] = cos_law(l3a,l4a,(PHI3a+pi/2));
 
 % -----------------------------------------------------------------------
 %                         FRAMES OF (a) AT REST
@@ -52,7 +55,7 @@ T_2a_1a_0 = [[Ref_2a_1a; 0 0 0] [O2a_1a_0;1]];
 
 % ----------- Frame {2} at rest position:
 Ref_2a = simplify(Rot(Ref_1a(:,2), PHI1a)*Ref_1a);
-Ref_2a = simplify(Rot(Ref_2a(:,3), PHI3a)*Ref_2a);
+Ref_2a = simplify(Rot(Ref_2a(:,3), (PHI3a+PHI6a))*Ref_2a);
 Ref_2a = [Ref_2a(:,2) Ref_2a(:,3) Ref_2a(:,1)];
 O2a_0 = T_1a_sa_0*[O2a_1a_0;1];
 O2a_0 = O2a_0(1:3);
